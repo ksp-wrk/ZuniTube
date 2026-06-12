@@ -36,7 +36,7 @@ jobs:
             for (const channelId of channels) {
               try {
                 // কোনো API Key ছাড়াই RSS দিয়ে চ্যানেলের সর্বশেষ ভিডিওগুলো স্ক্র্যাপ করা হচ্ছে
-                const res = await fetch(`https://youtube.com{channelId}`);
+                const res = await fetch(`https://youtube.com/{channelId}`);
                 const text = await res.text();
                 
                 // XML থেকে Video ID এবং Title খুঁজে বের করার সহজ লজিক
